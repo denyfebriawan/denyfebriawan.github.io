@@ -1,0 +1,4 @@
+node_modules/
+
+# Private: keep the CV out of the public repo
+*.pdf

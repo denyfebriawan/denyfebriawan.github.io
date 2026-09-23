@@ -1,286 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scheme-light-dark scroll-pt-20 motion-safe:scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Web Portofolio - Deny F</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="vendor/aos/aos.css" rel="stylesheet">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
-    <link href="style.css" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: MyResume - v4.7.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deny Febriawan — Web Developer</title>
+  <meta name="description" content="Portfolio of Deny Febriawan, a full-stack web developer who builds web apps from the interface to the database.">
+  <link rel="icon" href="img/profile-img.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
 </head>
+<body class="bg-page font-sans leading-relaxed text-ink">
+  <header class="sticky top-0 z-20 border-b border-line bg-page/80 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3" aria-label="Main">
+      <a href="#top" class="text-lg font-bold">Deny<span class="text-accent">.</span></a>
+      <ul class="flex text-sm font-medium text-muted">
+        <li><a href="#about" class="rounded-full px-2 py-1.5 transition-colors hover:text-accent sm:px-3 aria-[current=location]:bg-accent-soft aria-[current=location]:text-accent">About</a></li>
+        <li><a href="#projects" class="rounded-full px-2 py-1.5 transition-colors hover:text-accent sm:px-3 aria-[current=location]:bg-accent-soft aria-[current=location]:text-accent">Projects</a></li>
+        <li><a href="#contact" class="rounded-full px-2 py-1.5 transition-colors hover:text-accent sm:px-3 aria-[current=location]:bg-accent-soft aria-[current=location]:text-accent">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<body>
+  <main>
+    <section aria-label="Introduction" class="bg-linear-to-b from-accent-soft to-page">
+      <div class="mx-auto max-w-6xl px-4 pt-10 pb-8 md:pt-20">
+        <div class="grid items-center gap-10 md:grid-cols-[1fr_auto]">
+          <div>
+            <p class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 text-sm font-medium motion-safe:animate-fade-up">
+              <span class="relative flex size-2.5" aria-hidden="true">
+                <span class="absolute size-full rounded-full bg-green-500 opacity-75 motion-safe:animate-ping"></span>
+                <span class="relative size-2.5 rounded-full bg-green-500"></span>
+              </span>
+              Available for work
+            </p>
+            <h1 class="mt-5 text-4xl leading-tight font-bold sm:text-5xl lg:text-6xl motion-safe:animate-fade-up motion-safe:[animation-delay:100ms]">
+              Hi, I'm <span class="text-accent">Deny Febriawan</span>
+            </h1>
+            <p class="mt-3 text-xl font-semibold motion-safe:animate-fade-up motion-safe:[animation-delay:200ms]">Full-Stack Web Developer</p>
+            <p class="mt-4 max-w-[50ch] text-muted motion-safe:animate-fade-up motion-safe:[animation-delay:300ms]">I build web apps end to end, from the interface people use to the database behind it, and I pick the tools that fit the problem.</p>
+            <nav class="mt-8 flex flex-wrap gap-3 motion-safe:animate-fade-up motion-safe:[animation-delay:400ms]" aria-label="Contact links">
+              <a href="https://github.com/denyfebriawan" class="rounded-full border border-accent bg-accent px-4 py-2 font-semibold text-on-accent transition-opacity hover:opacity-90">GitHub</a>
+              <a href="https://www.linkedin.com/in/deny-febriawan-7106311b9/" class="rounded-full border border-line bg-surface px-4 py-2 font-semibold transition-colors hover:border-accent hover:text-accent">LinkedIn</a>
+              <a href="mailto:denyfebriawan@gmail.com" class="rounded-full border border-line bg-surface px-4 py-2 font-semibold transition-colors hover:border-accent hover:text-accent">Email</a>
+            </nav>
+          </div>
 
-    <!-- ======= Mobile nav toggle button ======= -->
-    <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-    <!-- ======= Header ======= -->
-    <header id="header" class="d-flex flex-column justify-content-center">
-
-        <nav id="navbar" class="navbar nav-menu">
-            <ul>
-                <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
-                </li>
-                <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Tentang Saya</span></a>
-                </li>
-                <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-                        <span>Portfolio</span></a></li>
-            </ul>
-        </nav><!-- .nav-menu -->
-
-    </header><!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Deny Febriawan</h1>
-            <p>Saya seorang <span class="typed" data-typed-items="Web Developer"></span></p>
-            <div class="social-links">
-
-
-                <a href="https://www.instagram.com/denyfebriawan/?hl=id" target="_blank" class="instagram"><i
-                        class="bx bxl-instagram"></i></a>
-
-                <a href="https://www.linkedin.com/in/deny-febriawan-7106311b9/" target="_blank" class="linkedin"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/denyfebriawan" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-            </div>
+          <div class="relative order-first mx-auto size-52 sm:size-64 md:order-last md:size-72 motion-safe:animate-float">
+            <div class="absolute -inset-4 rounded-full bg-accent/40 blur-2xl motion-safe:animate-glow" aria-hidden="true"></div>
+            <img src="img/profile-img.png" alt="Portrait of Deny Febriawan" width="288" height="288"
+              class="relative size-full rounded-full border-4 border-surface bg-accent-soft object-cover object-top shadow-xl">
+          </div>
         </div>
-    </section><!-- End Hero -->
+      </div>
+    </section>
 
-    <main id="main">
+    <section id="about" aria-labelledby="about-heading" class="mx-auto max-w-6xl px-4 py-8">
+      <h2 id="about-heading" class="mb-4 text-3xl font-bold">About me</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="rounded-xl border border-line bg-surface p-6 shadow-sm md:row-span-2">
+          <h3 class="mb-4 text-lg font-bold">Work experience</h3>
+          <ol class="space-y-5">
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">Full-Stack Developer</p>
+              <p class="text-sm text-muted">Proqua, Surakarta · Mar 2023 – Mar 2024</p>
+              <p class="mt-1 text-sm">Built and shipped features for a clinic management app integrated with the official BPJS API, in a four-person team, including production deployments.</p>
+            </li>
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">Full-Stack Developer &amp; Project Manager</p>
+              <p class="text-sm text-muted">Klinik Triyola, Surakarta · Jan 2023 – Mar 2023</p>
+              <p class="mt-1 text-sm">Led a clinic management REST API (Laravel, MySQL) serving up to 200 patients a day, with CI/CD on GitHub Actions.</p>
+            </li>
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">Full-Stack Developer &amp; Project Manager</p>
+              <p class="text-sm text-muted">Dinas Pariwisata Pemuda dan Olahraga Kabupaten Madiun · Aug 2022 – Jan 2023</p>
+              <p class="mt-1 text-sm">Led the Desa Wisata Kare tourism platform: online bookings, payment gateway integration and a tour-package recommendation engine.</p>
+            </li>
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">Lecturer Assistant</p>
+              <p class="text-sm text-muted">Sebelas Maret University · Aug 2022 – Jan 2023</p>
+              <p class="mt-1 text-sm">Taught practical sessions on backend web development with PHP, Laravel and CodeIgniter.</p>
+            </li>
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">Lab Assistant</p>
+              <p class="text-sm text-muted">Sebelas Maret University Computer Science Lab · Aug 2021 – Aug 2023</p>
+              <p class="mt-1 text-sm">Ran practical sessions, graded assignments and kept the lab's computers and network running, including for entrance exams.</p>
+            </li>
+          </ol>
+        </article>
 
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
+        <article class="rounded-xl border border-line bg-surface p-6 shadow-sm">
+          <h3 class="mb-4 text-lg font-bold">Education</h3>
+          <ol class="space-y-5">
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">Associate's Degree (D3) in Informatics Engineering</p>
+              <p class="text-sm text-muted">Sebelas Maret University, Surakarta · Jul 2021 – Jul 2023</p>
+              <p class="mt-1 text-sm">Graduated top of class with a GPA of 3.9 / 4.0.</p>
+            </li>
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">PLACEHOLDER: program name</p>
+              <p class="text-sm text-muted">Harisenin · 2026</p>
+            </li>
+            <li class="border-l-2 border-accent pl-4">
+              <p class="font-semibold">PLACEHOLDER: program name</p>
+              <p class="text-sm text-muted">SpartaCodingClub · 2022</p>
+            </li>
+          </ol>
+        </article>
 
-                <div class="section-title">
-                    <h2>Tentang Saya</h2>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="profile-img.jpg" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content">
-                        <h3>Web Developer.</h3>
-                        <p class="fst-italic">
-                            Saya seorang web developer junior dan saya masih aktif sebagai mahasiswa D3 Teknik
-                            Informatika Universitas Sebelas Maret Surakarta.
-                        </p>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>2 Februari
-                                            2001</span></li>
-
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+62 813 3132
-                                            6510</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Surakarta, Jawa
-                                            Tengah, Indonesia</span></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                                        <span>denyfebriawan@gmail.com</span>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        <article class="rounded-xl border border-line bg-surface p-6 shadow-sm">
+          <h3 class="mb-4 text-lg font-bold">Skills</h3>
+          <dl class="space-y-3">
+            <div>
+              <dt class="text-sm font-semibold text-accent">Frontend</dt>
+              <dd>HTML, CSS, JavaScript, TypeScript, React, Vue.js, Next.js, Tailwind CSS, Bootstrap</dd>
             </div>
-        </section><!-- End About Section -->
-
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Skills</h2>
-                    
-                </div>
-
-                <div class="row skills-content">
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">HTML <i class="val">100%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">CSS <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">JavaScript <i class="val">75%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="progress">
-                            <span class="skill">PHP <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <div class="progress">
-                            <span class="skill">MySQL <i class="val">90%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="progress">
-                            <span class="skill">Java <i class="val">80%</i></span>
-                            <div class="progress-bar-wrap">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                                    aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                       
-
-                    </div>
-
-                </div>
-
+            <div>
+              <dt class="text-sm font-semibold text-accent">Backend</dt>
+              <dd>PHP, Laravel, CodeIgniter, Node.js, Express, Python, REST APIs</dd>
             </div>
-        </section><!-- End Skills Section -->
-
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Portfolio</h2>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/myLawyer.png" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>My Lawyer</h4>
-                                <p>Web yang dibuat bersama dengan PT Cipta Mandiri Solusindo sebagai bentuk kerja sama
-                                    dalam rangka Project Base Learning</p>
-                                <div class="portfolio-links">
-
-                                    <a href="https://mylawyer.my.id" target="_blank"> <i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
+            <div>
+              <dt class="text-sm font-semibold text-accent">Database</dt>
+              <dd>MySQL, PostgreSQL, MongoDB, Prisma</dd>
             </div>
-        </section><!-- End Portfolio Section -->
-
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="container">
-            <h3>Deny Febriawan</h3>
-
-            <div class="social-links">
-
-                <a href="https://www.instagram.com/denyfebriawan/?hl=id" target="_blank" class="instagram"><i
-                        class="bx bxl-instagram"></i></a>
-
-                <a href="https://www.linkedin.com/in/deny-febriawan-7106311b9/" target="_blank" class="linkedin"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/denyfebriawan" target="_blank" class="github"><i
-                        class="bx bxl-github"></i></a>
+            <div>
+              <dt class="text-sm font-semibold text-accent">DevOps &amp; tools</dt>
+              <dd>Git, GitHub Actions, GitLab CI/CD, Docker</dd>
             </div>
-        </div>
-    </footer><!-- End Footer -->
+            <div>
+              <dt class="text-sm font-semibold text-accent">Other</dt>
+              <dd>Payment gateway integration, BPJS API integration, project management, technical documentation</dd>
+            </div>
+            <div>
+              <dt class="text-sm font-semibold text-accent">Languages</dt>
+              <dd>Bahasa Indonesia (native), English (professional working proficiency)</dd>
+            </div>
+          </dl>
+        </article>
 
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+        <article class="rounded-xl border border-line bg-surface p-6 shadow-sm md:col-span-2">
+          <h3 class="mb-4 text-lg font-bold">What I'm looking for</h3>
+          <p class="text-muted">A full-stack role where I can own features end to end, from database and API design to the interface, on a team that ships to real users. Based in Surakarta and open to remote or on-site work, whichever the role needs.</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-full bg-accent-soft px-3 py-1 text-sm font-medium text-accent">Full-Stack Developer</li>
+            <li class="rounded-full bg-accent-soft px-3 py-1 text-sm font-medium text-accent">Backend Developer</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-    <!-- Vendor JS Files -->
-    <script src="vendor/purecounter/purecounter.js"></script>
-    <script src="vendor/aos/aos.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="vendor/typed.js/typed.min.js"></script>
-    <script src="vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="vendor/php-email-form/validate.js"></script>
+    <section id="projects" aria-labelledby="projects-heading" class="mx-auto max-w-6xl px-4 py-8">
+      <h2 id="projects-heading" class="mb-4 text-3xl font-bold">Projects</h2>
+      <div id="tool-list" role="group" aria-label="Filter projects by tool" class="mb-6 flex flex-wrap gap-2"></div>
+      <div id="project-list" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+  </main>
 
-    <!-- Template Main JS File -->
-    <script src="js/main.js"></script>
-
+  <footer id="contact" class="mt-8 border-t border-line bg-surface">
+    <p class="mx-auto max-w-6xl px-4 pt-8 pb-12 text-center text-muted">Open to web developer roles. Email me at <a href="mailto:denyfebriawan@gmail.com" class="text-accent underline">denyfebriawan@gmail.com</a>.</p>
+  </footer>
 </body>
-
 </html>

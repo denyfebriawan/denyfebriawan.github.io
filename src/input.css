@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Site colors. Each one becomes Tailwind classes: --color-accent gives text-accent, bg-accent, border-accent... */
+@theme {
+  --color-page: #eef3fa;
+  --color-surface: #fbfdff;
+  --color-ink: #14233f;
+  --color-muted: #4a5b78;
+  --color-line: #d5dfed;
+  --color-accent: #2456c7;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: #dde8fa;
+}
+
+/* Animations. Each --animate-* becomes a class: --animate-fade-up gives animate-fade-up */
+@theme {
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 6s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* Dark mode: same color names, darker values, so no dark: classes are needed in the HTML */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-page: #070b14;
+    --color-surface: #0e1525;
+    --color-ink: #e2e9f5;
+    --color-muted: #94a4bf;
+    --color-line: #1d2940;
+    --color-accent: #6c9cff;
+    --color-on-accent: #07101f;
+    --color-accent-soft: #14213a;
+  }
+}
