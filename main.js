@@ -1,6 +1,8 @@
 import { projects } from "./projects.js";
+import { baseSkills, toolInfo } from "./skills.js";
 
 const toolList = document.querySelector("#tool-list");
+const skillList = document.querySelector("#skill-list");
 const projectList = document.querySelector("#project-list");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -21,22 +23,10 @@ let selectedTool = null;
 const LINK_CLASSES =
   "rounded-full border border-line bg-surface px-4 py-2 font-semibold transition-colors hover:border-accent hover:text-accent";
 
-// Tool name -> icon file in img/tech/. Tools missing here (Pest, PHPStan) just show text.
-const TOOL_ICONS = {
-  "React": "react",
-  "TypeScript": "typescript",
-  "Inertia.js": "inertia",
-  "Laravel": "laravel",
-  "Next.js": "nextdotjs",
-  "Node.js": "nodedotjs",
-  "PostgreSQL": "postgresql",
-  "Socket.io": "socketdotio",
-  "Tailwind CSS": "tailwindcss",
-};
-
-// The icon is a mask painted with the tag's own text color, so it follows the light/dark theme
+// The icon is a mask painted with the tag's own text color, so it follows the light/dark theme.
+// Tools without an icon in skills.js just show text.
 function toolIconHTML(tool) {
-  const icon = TOOL_ICONS[tool];
+  const icon = toolInfo[tool]?.icon;
   if (!icon) return "";
 
   const url = `url(img/tech/${icon}.svg)`;
@@ -111,6 +101,30 @@ function renderProjectsAnimated() {
   document.startViewTransition(renderProjects);
 }
 
+// Start from the hand-written skills, then add every project tool that is not listed yet
+function renderSkills() {
+  const groups = Object.fromEntries(Object.entries(baseSkills).map(([group, items]) => [group, [...items]]));
+
+  for (const tool of Object.keys(toolCounts)) {
+    if (!toolInfo[tool]) console.warn(`"${tool}" has no entry in toolInfo (skills.js), so it has no card icon and no Skills category`);
+
+    const alreadyListed = Object.values(groups).some((items) => items.includes(tool));
+    if (alreadyListed) continue;
+
+    const group = toolInfo[tool]?.category ?? "Other tools";
+    groups[group] ??= [];
+    groups[group].push(tool);
+  }
+
+  skillList.innerHTML = Object.entries(groups)
+    .map(([group, items]) => `
+      <div>
+        <dt class="text-sm font-semibold text-accent">${group}</dt>
+        <dd>${items.join(", ")}</dd>
+      </div>`)
+    .join("");
+}
+
 toolList.addEventListener("click", (event) => {
   const clickedChip = event.target.closest("button");
   if (!clickedChip) return;
@@ -147,6 +161,7 @@ function highlightCurrentSection() {
 
 toolList.innerHTML = [null, ...tools].map(chipHTML).join("");
 renderProjects();
+renderSkills();
 
 highlightCurrentSection();
 window.addEventListener("scroll", highlightCurrentSection, { passive: true });
