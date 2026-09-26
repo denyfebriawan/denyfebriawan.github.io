@@ -10,11 +10,8 @@ for (const tool of projects.flatMap((project) => project.tools)) {
   toolCounts[tool] = (toolCounts[tool] ?? 0) + 1;
 }
 
-// Filter chips only for tools shared by 2+ projects (a one-project filter just shows one card),
-// most-used first; tools with the same count in alphabetical order
-const tools = Object.keys(toolCounts)
-  .filter((tool) => toolCounts[tool] >= 2)
-  .sort((a, b) => toolCounts[b] - toolCounts[a] || a.localeCompare(b));
+// One filter chip per tool, most-used first; tools with the same count in alphabetical order
+const tools = Object.keys(toolCounts).sort((a, b) => toolCounts[b] - toolCounts[a] || a.localeCompare(b));
 
 // The tool picked in the filter; null means "All"
 let selectedTool = null;
