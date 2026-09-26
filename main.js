@@ -21,6 +21,28 @@ let selectedTool = null;
 const LINK_CLASSES =
   "rounded-full border border-line bg-surface px-4 py-2 font-semibold transition-colors hover:border-accent hover:text-accent";
 
+// Tool name -> icon file in img/tech/. Tools missing here (Pest, PHPStan) just show text.
+const TOOL_ICONS = {
+  "React": "react",
+  "TypeScript": "typescript",
+  "Inertia.js": "inertia",
+  "Laravel": "laravel",
+  "Next.js": "nextdotjs",
+  "Node.js": "nodedotjs",
+  "PostgreSQL": "postgresql",
+  "Socket.io": "socketdotio",
+  "Tailwind CSS": "tailwindcss",
+};
+
+// The icon is a mask painted with the tag's own text color, so it follows the light/dark theme
+function toolIconHTML(tool) {
+  const icon = TOOL_ICONS[tool];
+  if (!icon) return "";
+
+  const url = `url(img/tech/${icon}.svg)`;
+  return `<span aria-hidden="true" class="size-3.5 shrink-0 bg-current" style="mask: ${url} center / contain no-repeat; -webkit-mask: ${url} center / contain no-repeat"></span>`;
+}
+
 function chipHTML(tool) {
   const label = tool ?? "All";
   const count = tool ? `<span class="text-xs opacity-70">${toolCounts[tool]}</span>` : "";
@@ -45,7 +67,7 @@ function projectCardHTML(project) {
   const toolTags = project.tools
     .map((tool) => {
       const colors = tool === selectedTool ? "bg-accent text-on-accent" : "bg-accent-soft text-accent";
-      return `<li class="rounded-full px-2.5 py-0.5 text-xs font-medium ${colors}">${tool}</li>`;
+      return `<li class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium ${colors}">${toolIconHTML(tool)}${tool}</li>`;
     })
     .join("");
 
