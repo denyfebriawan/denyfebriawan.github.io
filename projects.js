@@ -3,6 +3,17 @@
 // the Tools section merges identical names into one chip.
 export const projects = [
   {
+    title: "Kinoo",
+    description:
+      "Watch-party app where friends watch the same YouTube video in sync, with live chat. " +
+      "The server is the single source of truth for playback, and viewers who slowly drift out of sync are pulled back automatically.",
+    tools: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Socket.io", "Node.js"],
+    image: "img/projects/kinoo-app.png",
+    repo: "https://github.com/denyfebriawan/kinoo",
+    demo: "https://kinoo-nine.vercel.app",
+    status: null,
+  },
+  {
     title: "Ngajarin",
     description:
       "Online lesson booking platform for tutors and tutoring centers: each workspace gets a public page where students pick a subject, a teacher and a free time slot. " +
